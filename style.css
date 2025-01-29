@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+.main {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the top */
+    background-image: url('jaar.jpg');
+    background-size: 100% 100%;
+    
+    padding-top: 50px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main .image-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.main .image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container h1 {
+    color: #00bcd4;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.main .image-container p {
+    color: #324042;
+    margin-bottom: 40px;
+}
+
+.main .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 50px;
+    border-radius: 20px;
+    background: rgb(202 253 255 / 50%);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.main .input .talk {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main .input .talk i {
+    font-size: 20px;
+    color: #aed0d0;
+}
+
+.main .input .content {
+    color: #000000;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+/* Output Section Styling */
+.output {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.output .output-box {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 60%;
+    max-width: 600px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
