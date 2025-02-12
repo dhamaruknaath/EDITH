@@ -9,28 +9,15 @@
 
 .main {
     min-height: 100vh;
-    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align to the top */
+    justify-content: flex-start;
     background-image: url('jaar.jpg');
-    background-size: 100% 100%;
-    
+    background-size: cover;
+    background-position: center;
     padding-top: 50px;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .main .image-container {
@@ -38,17 +25,17 @@
     text-align: center;
 }
 
-.main .image-container .image {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .main .image-container h1 {
     color: #00bcd4;
     font-size: 40px;
     margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px rgba(0, 188, 212, 0.6); }
+    100% { text-shadow: 0 0 15px rgba(0, 188, 212, 1); }
 }
 
 .main .image-container p {
@@ -60,7 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vw;
+    width: 90%;
+    max-width: 400px;
     height: 50px;
     border-radius: 20px;
     background: rgb(202 253 255 / 50%);
@@ -79,20 +67,19 @@
     align-items: center;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.main .input .talk i {
-    font-size: 20px;
-    color: #aed0d0;
+.main .input .talk:hover i {
+    color: #00bcd4;
+    transform: scale(1.1);
 }
 
-.main .input .content {
-    color: #000000;
-    font-size: 15px;
-    margin-right: 20px;
+.main .input .talk:active i {
+    transform: scale(0.9);
+    color: #007a8c;
 }
 
-/* Output Section Styling */
 .output {
     width: 100%;
     display: flex;
@@ -115,4 +102,20 @@
     color: #333;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cursor Blinking Effect */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .main .image-container h1 { font-size: 28px; }
+    .output .output-box { width: 80%; font-size: 16px; }
 }
