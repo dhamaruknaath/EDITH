@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-image: url('jaar.jpg');
+    background-image: radial-gradient(navy);
     background-size: cover;
     background-position: center;
     padding-top: 50px;
